@@ -6,4 +6,4 @@ before_install:
   - docker build -t harryspooner/dockdemo -f Dockerfile.dev .
 
 script:
-  - docker run harryspooner/dockdemo npm run test -- --coverage
+  - docker run -e CI=true harryspooner/dockdemo npm run test -- --coverage
